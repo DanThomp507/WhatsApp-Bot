@@ -29,8 +29,8 @@ class WhatsappBot {
   static async googleSearch(req, res, next) {
     const twiml = new MessagingResponse();
     const q = req.body.Body;
-    console.log(googleAPIKey)
     const options = { cx, q, auth: googleApiKey };
+    console.log(options)
 
     try {
       const result = await customsearch.cse.list(options);
